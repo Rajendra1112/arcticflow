@@ -1,0 +1,12 @@
+<svg width="47" height="41" viewBox="0 0 47 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-park:send-email">
+<rect x="0.5" y="0.5" width="46" height="40" rx="5.5" fill="white"/>
+<rect x="0.5" y="0.5" width="46" height="40" rx="5.5" stroke="black"/>
+<g id="Group">
+<path id="Vector" d="M37.5037 20.4464V10H23.8673H10.231V20.4464V30.8929H23.8673" stroke="#414141" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M37.5035 27.4108H27.958" stroke="#414141" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M34.0947 23.9286L37.5038 27.4107L34.0947 30.8929" stroke="#414141" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M10.231 10L23.8673 20.4464L37.5037 10" stroke="#414141" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

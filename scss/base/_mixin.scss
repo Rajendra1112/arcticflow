@@ -1,0 +1,87 @@
+@mixin line-clamp($line-no) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line-no;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin display-flex {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin justify-content-spacebetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transform-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-transform-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin background-property {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin poppins-font($font-size, $font-weight, $line-height) {
+  font-family: "Poppins", sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin inter-font($font-size, $font-weight, $line-height) {
+  font-family: "Inter", sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin custom-m($m-value) {
+  margin: $m-value;
+}
+
+@mixin custom-mt($mt-value) {
+  margin-top: $mt-value;
+}
+
+@mixin custom-mr($mr-value) {
+  margin-right: $mr-value;
+}
+
+@mixin custom-mb($mb-value) {
+  margin-bottom: $mb-value;
+}
+
+@mixin custom-ml($ml-value) {
+  margin-left: $ml-value;
+}
+
+@mixin custom-mtb($mtb-value) {
+  margin: $mtb-value 0;
+}
+
+@mixin custom-mlr($mlr-value) {
+  margin: 0 $mlr-value;
+}

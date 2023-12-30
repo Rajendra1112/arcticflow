@@ -1,0 +1,337 @@
+// banner section styling
+.banner-section {
+  .row {
+    row-gap: 5rem;
+    .video-wrapper {
+      position: relative;
+      .play-btn {
+        background: $primary-color;
+        width: 6.8rem;
+        height: 4.6rem;
+        border-radius: 1rem;
+        @include flex-center;
+        @include transform-center;
+        transition: all 0.3s ease-in-out;
+        i {
+          font-size: 2rem;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+// about section styling
+.about-us-section {
+  .document-content {
+    padding-bottom: 3rem;
+    border-bottom: 0.2rem solid #cacaca;
+  }
+  .our-vision {
+    padding-bottom: 3rem;
+  }
+}
+
+// common objective class stlying
+.objective {
+  padding: 3rem 0 0 0;
+  display: flex;
+  column-gap: 2rem;
+
+  .document-content {
+    border: none;
+    padding: 0;
+  }
+
+  i {
+    font-size: 2.4rem;
+    color: $primary-color;
+    padding-top: 0.2rem;
+  }
+  h3 {
+    @include poppins-font(2rem, 600, normal);
+    color: $primary-color;
+  }
+}
+
+// common styling about us section and about container of about page styling
+.about-us-section,
+.about-page-first-container {
+  .row {
+    justify-content: space-between;
+  }
+}
+
+// service section styling
+.service-section {
+  .row {
+    @include custom-mb(3rem);
+  }
+}
+
+// process sectio styling
+.process-section {
+  padding-bottom: 10rem;
+  .processes {
+    @include justify-content-spacebetween;
+    position: relative;
+    figure {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      padding: 1rem;
+      background: $primary-color;
+      overflow: visible;
+      z-index: 1;
+      img {
+        border-radius: 50%;
+      }
+      figcaption {
+        @include poppins-font(2.4rem, 500, normal);
+        @include custom-mt(2rem);
+      }
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      border: 0.2rem dashed $primary-color;
+      position: absolute;
+      @include transform-center;
+    }
+  }
+}
+
+// portfolio section styling
+.portfolio-section {
+  .section-heading {
+    @include custom-mb(3rem);
+  }
+
+  .nav-tabs {
+    justify-content: center;
+    border: none;
+    @include custom-mb(5rem);
+    column-gap: 3.7rem;
+    .nav-link {
+      @include poppins-font(2rem, 400, normal);
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+      color: $light-black-color;
+      padding: 0.5rem 2rem;
+      border: none;
+      outline: none;
+      border-radius: 0;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background: $primary-color;
+        color: $white-color;
+      }
+    }
+    .nav-link.active {
+      background: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  .tab-content {
+    @include custom-mb(3rem);
+    .portfolio-card {
+      position: relative;
+      height: 100%;
+      padding-left: 5.55rem;
+      figure {
+        width: fit-content;
+        height: 33.3rem;
+      }
+      .view-project {
+        width: 24.7rem;
+        padding: 3.6rem 4rem;
+        background: $white-color;
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+        position: absolute;
+        bottom: 3.2rem;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+        .project-title {
+          @include poppins-font(2.4rem, 500, 2.8rem);
+          text-align: start;
+          word-break: break-word;
+          @include custom-mb(1rem);
+        }
+      }
+      &:hover {
+        .view-project {
+          left: 5.55rem;
+          .project-title {
+            color: $dark-primary-color;
+          }
+          .secondary-btn {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// testimonial section styling
+.testimonial-section {
+  .section-heading {
+    @include custom-mb(3rem);
+  }
+}
+
+.testimonial-card {
+  @include custom-m(2rem);
+  .row {
+    > div:first-child {
+      padding-right: 0;
+      figure {
+        height: 100%;
+      }
+    }
+
+    > div:last-child {
+      padding-left: 0;
+      .review-col {
+        border-left: 1rem solid $primary-color;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+        padding: 5rem;
+        text-align: start;
+        background: $white-color;
+        .client-review {
+          @include poppins-font(1.8rem, 400, 3rem);
+          text-align: justify;
+          @include custom-mb(1.6rem);
+          position: relative;
+          &::after {
+            content: url("../images/icon/quotation-icon.svg");
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+        .client-name {
+          @include poppins-font(2.2rem, 700, 2.7rem);
+          @include custom-mb(0.2rem);
+        }
+        .job-position {
+          @include poppins-font(1.4rem, 400, 2.7rem);
+        }
+      }
+    }
+  }
+}
+
+// blog section styling
+.blog-section {
+  .row {
+    @include custom-mb(3rem);
+  }
+}
+
+.blog-card {
+  height: 100%;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  &::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 0.4rem;
+    background: $primary-color;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .card {
+    border: none;
+    border-radius: 0;
+    > figure {
+      width: fit-content;
+      height: 28.2rem;
+    }
+
+    .card-body {
+      padding: 3rem;
+      .published-date {
+        @include display-flex;
+        column-gap: 0.5rem;
+        @include custom-mb(0.8rem);
+        figure {
+          width: 1.8rem;
+        }
+        .date {
+          @include poppins-font(1.2rem, 400, normal);
+        }
+      }
+
+      .card-title {
+        @include poppins-font(2rem, 500, 2.6rem);
+        @include custom-mb(1rem);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .card-text {
+        @include poppins-font(1.4rem, 400, 2.2rem);
+        @include custom-mb(1.5rem);
+        @include line-clamp(3);
+        text-align: justify;
+      }
+
+      .blog-link {
+        @include poppins-font(1.4rem, 400, 2.7rem);
+        transition: all 0.3s ease-in-out;
+        margin: 0;
+      }
+    }
+  }
+
+  &:hover {
+    .card-title,
+    .blog-link {
+      color: $primary-color;
+    }
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+// client section styling
+.clients-carousel-1,
+.clients-carousel-2 {
+  .owl-item {
+    figure {
+      height: 13.6rem;
+      background: #fff;
+      margin: 2rem;
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+// tools and technologies section styling
+.tools-technologies-section {
+  .section-heading {
+    @include custom-mb(3rem);
+  }
+  .tools-technologies-carousel {
+    .owl-item {
+      figure {
+        height: 8rem;
+        background: #fff;
+        margin: 1.6rem;
+        padding: 0.5rem;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.2);
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

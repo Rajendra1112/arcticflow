@@ -1,0 +1,126 @@
+footer {
+  color: $white-color;
+  .container {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        @include display-flex;
+        gap: 1rem;
+      }
+    }
+
+    a {
+      color: $white-color;
+      @include poppins-font(1.6rem, 400, normal);
+    }
+
+    i {
+      font-size: 2.7rem;
+    }
+
+    .footer-col-title {
+      @include inter-font(2.4rem, 700, normal);
+      @include custom-mb(3rem);
+      text-transform: capitalize;
+    }
+
+    .social-media {
+      @include display-flex;
+      justify-content: space-between;
+    }
+
+    .upper-footer-section {
+      border-bottom: 0.1rem solid rgba(222, 222, 222, 0.3);
+      .row {
+        > div:nth-child(3) {
+          padding-left: 3rem;
+        }
+      }
+    }
+
+    .lower-footer-section {
+      border-bottom: 0.1rem solid rgba(222, 222, 222, 0.3);
+      .footer-links {
+        .row {
+          .col {
+            @include custom-mb(1.1rem);
+            a {
+              &::before {
+                content: "\f0a4";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                @include custom-mr(1rem);
+              }
+            }
+          }
+        }
+      }
+      // form element styling
+      .footer-form {
+        .email-field {
+          background: $white-color;
+          padding: 1rem;
+          position: relative;
+          @include custom-mb(1.5rem);
+          input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0 !important;
+            color: $light-black-color !important;
+            @include poppins-font(1.4rem, 400, normal);
+            background: transparent;
+            padding-left: 3rem;
+          }
+          i {
+            display: inline-block;
+            color: $light-black-color;
+            font-size: 2.2rem !important;
+            @include vertical-transform-center;
+          }
+
+          .form-control {
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+        button {
+          border: none;
+        }
+      }
+    }
+
+    .copyright-section {
+      padding: 1.5rem 0;
+      .container {
+        .row {
+          > div {
+            padding: 0;
+          }
+        }
+      }
+      p,
+      a {
+        @include poppins-font(1.4rem, 400, normal);
+        margin: 0;
+        text-transform: capitalize;
+      }
+      .company-regulation {
+        @include display-flex;
+        justify-content: end;
+        a {
+          padding: 0 2rem;
+        }
+        a:first-child {
+          border-right: 0.2rem solid $white-color;
+        }
+        a:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

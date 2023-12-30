@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // outline: 1px solid red;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $white-color;
+  color: $light-black-color;
+  scroll-behavior: smooth;
+  ::selection {
+    background: $primary-color;
+    color: $light-black-color;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $light-black-color;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+// button {
+//   border: none;
+// }
+
+.owl-nav {
+  @include flex-center;
+  column-gap: 1rem;
+  button {
+    margin: 0 !important;
+
+    i {
+      border-radius: 50%;
+      border: 0.3rem solid $light-black-color;
+      font-size: 2rem;
+      padding: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      background: transparent !important;
+      i {
+        color: $primary-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+.owl-dots {
+  .owl-dot {
+    span {
+      width: 2rem !important;
+      background: $light-primary-color !important;
+      transition: all 0.3s ease-in-out !important;
+    }
+    &:hover {
+      span {
+        background: $primary-color !important;
+      }
+    }
+  }
+
+  .owl-dot.active {
+    span {
+      width: 3rem !important;
+      background: $primary-color !important;
+    }
+  }
+}
+
+.section-padding {
+  padding: 7rem 0;
+}
+
+.banner-heading {
+  text-transform: capitalize;
+  @include inter-font(4.2rem, 600, 6rem);
+  @include custom-mb(1.4rem);
+  span {
+    color: $primary-color;
+  }
+}
+
+.banner-detail {
+  @include custom-mb(2.5rem);
+  @include poppins-font(1.4rem, 400, 2.6rem);
+}
+
+.sub-heading {
+  text-transform: capitalize;
+  @include poppins-font(1.6rem, 500, normal);
+  @include custom-mb(1.5rem);
+  &::before {
+    content: url("../images/icon/arrow-left-icon.svg");
+    display: inline-block;
+    @include custom-mr(2rem);
+  }
+
+  &::after {
+    content: url("../images/icon/arrow-right-icon.svg");
+    display: inline-block;
+    @include custom-ml(2rem);
+  }
+}
+
+.section-heading {
+  @include inter-font(2.8rem, 600, 4.2rem);
+  @include custom-mb(5rem);
+  text-transform: capitalize;
+  span {
+    color: $primary-color;
+  }
+}
+
+.section-bg-gray {
+  background: #f0f1f0;
+}
+
+.service-card {
+  padding: 3rem;
+  border: none;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0;
+  text-align: start;
+  row-gap: 2rem;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  figure {
+    width: fit-content;
+    height: 6.5rem;
+    filter: grayscale(100%);
+  }
+
+  .card-body {
+    padding: 0;
+    .card-title {
+      @include poppins-font(1.6rem, 500, normal);
+      color: $light-black-color;
+      @include custom-mb(1.5rem);
+    }
+    .card-text {
+      color: $light-black-color;
+      @include poppins-font(1.4rem, 400, 2.2rem);
+      @include line-clamp(5);
+      text-align: justify;
+    }
+  }
+  &:hover {
+    transform: translateY(-1rem);
+    background: $secondary-color;
+    figure {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+// form styling
+.custom-form {
+  padding: 5rem 4rem;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  input,
+  textarea,
+  select {
+    padding: 1rem 1.5rem;
+    @include poppins-font(1.6rem, 400, 2.5rem);
+    border: 0.2rem solid $border-color-1;
+    border-radius: 0 !important;
+    &:focus {
+      box-shadow: 0 0 0.5rem $gray-color;
+      border-color: transparent;
+    }
+  }
+
+  label {
+    @include poppins-font(1.6rem, 400, 2.5rem);
+  }
+
+  .error-message {
+    font-style: italic;
+    @include poppins-font(1.4rem, 400, normal);
+    width: 100%;
+    @include custom-mt(0.4rem);
+    color: #b02a37;
+  }
+}
+
+.document-content {
+  p {
+    margin: 2rem 0;
+    @include poppins-font(1.6rem, 400, 2.6rem);
+    text-align: justify;
+
+    a {
+      font-style: italic;
+      color: $primary-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      width: auto !important;
+      height: auto !important;
+      margin: 2rem 0;
+    }
+
+    span {
+      color: #000;
+      font-weight: bold;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  // table inside document content common class
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+    table {
+      min-width: 60rem;
+      thead {
+        tr {
+          @include poppins-font(1.6rem, 500, 2.6rem);
+          letter-spacing: 0.2rem;
+          color: $white-color;
+          background: $primary-color;
+          th {
+            padding: 1rem !important;
+            border: 0.1rem solid $light-black-color;
+          }
+        }
+      }
+      tbody {
+        tr {
+          @include poppins-font(1.6rem, 400, 2.6rem);
+          letter-spacing: 0.1rem;
+          th,
+          td {
+            border: 0.1rem solid $primary-color;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // heading styling
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 2rem 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: $primary-color;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+    line-height: 2.6rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+
+  h4 {
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+  }
+
+  h5 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  h6 {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+
+  // styling of list style
+  ul,
+  ol {
+    margin: 2rem 0;
+    padding-left: 4rem;
+    li {
+      @include poppins-font(1.6rem, 400, 2.6);
+      color: $black-color;
+
+      a {
+        font-style: italic;
+        color: $primary-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  blockquote {
+    padding: 2rem 2.4rem;
+    margin: 2rem 0;
+    border-left: 0.4rem solid $primary-color;
+    background: #d9efda;
+    p {
+      @include poppins-font(1.6rem, 400, 2.6rem);
+      text-align: justify;
+      margin: 0;
+    }
+  }
+
+  .primary-btn {
+    @include poppins-font(1.6rem, 600, normal);
+    padding: 1rem 2.4rem;
+    cursor: pointer;
+    background: $primary-color;
+    color: $white-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  // accordion inside common class
+  .accordion {
+    --bs-accordion-active-color: #fff !important;
+    --bs-accordion-active-bg: #2cbd2f !important;
+    --bs-accordion-btn-focus-border-color: none !important;
+    --bs-accordion-btn-focus-box-shadow: none !important;
+    margin: 2rem 0;
+    h2 {
+      margin: 0 !important;
+    }
+
+    .accordion-item {
+      margin: 1rem 0;
+      border-radius: 0;
+      border: 1px solid $border-color-1;
+      overflow: hidden;
+      .accordion-header {
+        .accordion-button {
+          @include poppins-font(1.6rem, 500, 2.6rem);
+          padding: 1rem 2rem;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 0;
+          &::after {
+            margin: 0;
+            background-image: none;
+            content: "\f078";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            @include flex-center;
+            margin-right: 0.4rem;
+          }
+        }
+      }
+      .accordion-collapse {
+        .accordion-body {
+          text-align: justify;
+          padding: 1.8rem 2rem;
+          @include poppins-font(1.6rem, 400, 2.6rem);
+          background: $white-color;
+        }
+      }
+    }
+  }
+}
+
+// breadcrumb section styling
+.breadcrumb-section {
+  width: 100%;
+  height: 25rem;
+  color: $white-color;
+  @include flex-center;
+  .container {
+    @include flex-center;
+    flex-direction: column;
+    .page-title {
+      text-transform: capitalize;
+      @include inter-font(4.4rem, 600, normal);
+      letter-spacing: 0.088rem;
+      @include custom-mb(1rem);
+      color: $white-color;
+    }
+    .breadcrumb {
+      justify-content: center;
+      margin: 0;
+      @include inter-font(2.2rem, 600, normal);
+      letter-spacing: 0.044rem;
+      .breadcrumb-item {
+        a {
+          color: $white-color;
+        }
+      }
+      .breadcrumb-item ~ .breadcrumb-item {
+        display: flex;
+        align-items: center;
+        &::before {
+          content: "\f054";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 1.8rem;
+          color: $white-color;
+        }
+      }
+      .active {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// pagination styling
+.pagination {
+  column-gap: 0.8rem;
+  .page-item {
+    .page-link {
+      width: 4rem;
+      height: 4rem;
+      @include flex-center;
+      border-radius: 50%;
+      // padding: 0.7rem 1.3rem;
+      @include poppins-font(1.6rem, 400, normal);
+      letter-spacing: 0.032rem;
+      border: 0.1rem solid $primary-color;
+      color: $primary-color;
+      background: transparent;
+      &:focus,
+      &:hover {
+        box-shadow: 0 0 0.5rem $primary-color;
+        background: #d9efda;
+      }
+    }
+  }
+  .page-item.active {
+    .page-link {
+      background: $primary-color;
+      box-shadow: 0 0 0.5rem $primary-color;
+      color: $white-color;
+    }
+  }
+
+  .page-item.disabled {
+    .page-link {
+      color: $gray-color;
+      border-color: $gray-color;
+    }
+  }
+}
+
+// inner page heading 1 used in inner pages
+.inner-page-heading-1 {
+  text-transform: capitalize;
+  @include inter-font(4.4rem, 600, normal);
+  letter-spacing: 0.088rem;
+  @include custom-mb(2rem);
+  word-break: break-word;
+}
+
+// inner page heading 1 used in inner pages
+.inner-page-heading-2 {
+  @include poppins-font(2.8rem, 600, 2.6rem);
+  font-family: "Poppins", sans-serif;
+  margin: 2rem 0;
+  text-transform: capitalize;
+  color: #2cbd2f;
+}
+
+// animation for image scrolling
+@keyframes scrolling-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -80%);
+  }
+}
+
+// scroll to top button styling
+#scroll-to-top {
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  @include flex-center;
+  position: fixed;
+  bottom: 1.3rem;
+  right: 1.5rem;
+  background: $primary-color;
+  color: $white-color;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  display: none;
+  z-index: 100;
+
+  i {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background: $black-color;
+    i {
+      color: $primary-color;
+    }
+  }
+}

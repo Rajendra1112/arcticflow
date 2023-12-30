@@ -1,0 +1,341 @@
+// small screen laptop
+@media (max-width: 1024px) {
+  header {
+    .container {
+      .offcanvas {
+        padding: 2rem;
+        .offcanvas-body {
+          ul {
+            li {
+              margin-bottom: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// for large screen tablets
+@media (max-width: 991px) {
+  // common class styling
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  // styling of header
+  header {
+    .container {
+      .phone-contact,
+      .email-contact,
+      .working-hour {
+        display: none;
+      }
+    }
+  }
+
+  // styling of index page
+
+  // banner section styling
+  .banner-section {
+    .row {
+      > div:first-child {
+        order: 2;
+      }
+      > div:last-child {
+        order: 1;
+      }
+    }
+  }
+
+  // about section styling
+  .about-us-section {
+    .row {
+      > div:first-child {
+        order: 2;
+      }
+      > div:last-child {
+        order: 1;
+      }
+      row-gap: 2rem;
+    }
+  }
+
+  // portfolio section styling
+  .portfolio-card {
+    padding-left: 2rem !important;
+  }
+
+  // testimonial section styling
+  .review-col {
+    padding: 3rem 2rem !important;
+  }
+
+  // footer styling
+  footer {
+    .container {
+      .footer-col-title {
+        margin-bottom: 1rem;
+      }
+
+      .upper-footer-section {
+        .row {
+          row-gap: 4rem;
+          > div:nth-child(3) {
+            padding-left: 0.75rem !important;
+          }
+
+          .social-media {
+            justify-content: start;
+            column-gap: 1.8rem;
+          }
+        }
+      }
+
+      .lower-footer-section {
+        > .row {
+          row-gap: 4rem;
+        }
+      }
+    }
+
+    .copyright-section {
+      .container {
+        .row {
+          row-gap: 2rem;
+          > div:first-child {
+            p {
+              text-align: center;
+            }
+          }
+          > div:last-child {
+            .company-regulation {
+              justify-content: center !important;
+              a:last-child {
+                padding-right: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //responsiveness of index page completed
+
+  // styling of about us page
+  // styling of advantage section
+  .advantage-col-wrapper {
+    padding: 6rem 4rem !important;
+  }
+
+  // progress section styling
+  .progress-section {
+    .row {
+      row-gap: 2rem;
+      .box {
+        .chart {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  // styling of contact us page
+  .contact-section {
+    .row {
+      row-gap: 2rem;
+      > div:first-child {
+        text-align: center;
+        ul {
+          li {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  // single blog page styling
+  .related-blogs {
+    position: static !important;
+  }
+}
+// end of responsive styling for large screen tablest
+
+// for tablets
+@media (max-width: 767px) {
+  // styling of index page
+  // process section styling
+  .process-section {
+    .processes {
+      row-gap: 6rem;
+      flex-wrap: wrap;
+      position: static;
+      &::after {
+        display: none !important;
+      }
+      figure:nth-child(1),
+      figure:nth-child(2),
+      figure:last-child {
+        position: relative;
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 4rem;
+          border: 0.2rem dashed $primary-color;
+          @include vertical-transform-center;
+          left: 100%;
+        }
+      }
+
+      figure:nth-child(3) {
+        position: relative;
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 14rem;
+          border: 0.2rem dashed #2cbd2f;
+          transform: rotate(90deg);
+          position: absolute;
+          right: 0.5rem;
+          top: 21rem;
+        }
+        figcaption {
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      figure:last-child {
+        &::after {
+          width: 30.2rem;
+        }
+      }
+    }
+  }
+
+  // styling of portfolio section styling
+  .portfolio-section {
+    .nav-tabs {
+      row-gap: 2rem;
+    }
+  }
+
+  // testimonial-section styling
+  .testimonial-card {
+    .row {
+      > div:first-child {
+        padding: 0 0.75rem !important;
+      }
+      > div:last-child {
+        padding-left: 0.75rem !important;
+        .review-col {
+          border-left: 0 !important;
+          border-top: 1rem solid #2cbd2f;
+        }
+      }
+    }
+  }
+
+  // blog section styling
+  .blog-card {
+    .card {
+      > figure {
+        height: auto !important;
+      }
+    }
+  }
+
+  // styling of job apply page
+  .job-apply-page-content-section {
+    .job-details {
+      .table-wrapper {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+// for large screen mobile
+@media (max-width: 575px) {
+  // common class styling
+  .sub-heading {
+    &::before {
+      display: none;
+    }
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  .custom-form {
+    padding: 2rem !important;
+  }
+
+  // styling of index page
+  // process section styling
+  .process-section {
+    .processes {
+      flex-direction: column;
+      figure {
+        &::after {
+          display: none !important;
+        }
+
+        figcaption {
+          margin-top: 1rem !important;
+        }
+      }
+    }
+  }
+
+  // styling of single service page
+  .service-page-content-section {
+    .modal {
+      .modal-content {
+        .modal-header {
+          padding: 2rem !important;
+        }
+
+        .modal-body {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+
+  // styling of single portfolio page
+  .portfolio-page-content-section {
+    .large-screen {
+      figure {
+        border-radius: 1rem !important;
+        img:last-child {
+          width: 100% !important;
+          left: 0 !important;
+        }
+      }
+    }
+
+    .small-screen {
+      figure {
+        width: 25rem !important;
+        border-radius: 4rem !important;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  // job apply page styling
+  .job-apply-page-content-section {
+    .job-details {
+      width: 100% !important;
+      margin: 0 !important;
+      .qualification,
+      .requirement {
+        padding: 1rem !important;
+      }
+    }
+  }
+}
+// end responsiveness for large screen mobile devices

@@ -1,0 +1,168 @@
+.about-page-first-container {
+  padding: 4rem 0;
+  .container {
+    .document-content {
+      border-bottom: none !important;
+    }
+
+    .row:first-child {
+      padding-bottom: 4rem;
+      border-bottom: 0.2rem solid #cacaca;
+    }
+
+    .row:last-child {
+      padding-top: 4rem;
+      row-gap: 3rem;
+      .objective {
+        margin: 0 !important;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.advantage-section {
+  overflow: hidden;
+  .container-fluid {
+    padding: 0;
+    > .row {
+      > div:first-child {
+        .advantage-img-wrapper {
+          overflow: visible;
+          width: 80%;
+          padding: 6rem 0 6rem 7rem;
+          > figure {
+            @include custom-mr(-7rem);
+          }
+        }
+      }
+      .advantage-col-wrapper {
+        .section-heading {
+          text-align: center;
+        }
+        padding: 6rem 7rem 6rem 0;
+        .advantage-col {
+          @include display-flex;
+          column-gap: 1rem;
+          figure {
+            filter: grayscale(100%);
+            transition: all 0.3s ease-in-out;
+          }
+          h3 {
+            @include poppins-font(2rem, 500, normal);
+            margin: 0;
+            transition: all 0.3s ease-in-out;
+          }
+          p {
+            @include poppins-font(1.6rem, 400, normal);
+            color: #797979;
+            margin: 0;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover {
+            figure {
+              filter: grayscale(0%);
+            }
+            h3,
+            p {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.progress-section {
+  .box {
+    .chart {
+      position: relative;
+      @include custom-mb(2rem);
+      span {
+        @include transform-center;
+        @include poppins-font(3.5rem, 500, normal);
+        color: $light-black-color;
+      }
+      canvas {
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+    h2 {
+      @include poppins-font(2.4rem, 500, normal);
+    }
+  }
+}
+
+.team-section {
+  .row {
+    @include custom-mb(3rem);
+    .team-member {
+      height: 40rem;
+      figure {
+        position: relative;
+        color: $white-color;
+        height: 100%;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+        figcaption {
+          background: linear-gradient(
+            180deg,
+            hsla(0, 0%, 0%, 0) 0%,
+            hsl(0, 0%, 0%) 150%
+          );
+          padding-bottom: 2.5rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.5rem;
+          justify-content: end;
+          align-items: center;
+          transition: all 0.5s ease-in-out;
+        }
+        .member-detail {
+          // background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+          background: linear-gradient(
+            180deg,
+            hsla(0, 0%, 0%, 0) 0%,
+            hsl(0, 0%, 0%) 120%
+          );
+          padding-bottom: 5rem;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.5rem;
+          justify-content: end;
+          align-items: center;
+          transition: all 0.5s ease-in-out;
+          i {
+            font-size: 2.5rem;
+            color: $white-color;
+          }
+        }
+        .member-name {
+          @include poppins-font(2rem, 600, 2.2rem);
+        }
+        .member-position {
+          @include poppins-font(1.6rem, 500, normal);
+        }
+        &:hover {
+          figcaption {
+            left: -100%;
+          }
+          .member-detail {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

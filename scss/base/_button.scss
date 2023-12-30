@@ -1,0 +1,31 @@
+.primary-btn {
+  @include poppins-font(1.6rem, 600, normal);
+  padding: 1rem 2.4rem;
+  cursor: pointer;
+  background: $primary-color;
+  color: $white-color;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+  border: none;
+  // &:hover {
+  //   background: $black-color;
+  // }
+}
+
+.secondary-btn {
+  @include poppins-font(1.6rem, 500, normal);
+  text-align: start;
+  cursor: pointer;
+  background: transparent;
+  color: $light-black-color;
+  border: none;
+  outline: none;
+  @include display-flex;
+  column-gap: 1rem;
+  transition: all 0.3s ease-in-out;
+  &::after {
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+}

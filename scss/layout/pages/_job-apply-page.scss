@@ -1,0 +1,37 @@
+.job-apply-page-content-section {
+  .job-details {
+    width: 80%;
+    margin: 0 auto;
+    .table-wrapper {
+      overflow: auto;
+      .custom-table {
+        min-width: 50rem;
+        tbody {
+          tr {
+            td {
+              padding: 1rem 1.5rem;
+              @include poppins-font(1.6rem, 500, 2.6rem);
+              letter-spacing: 0.1rem;
+              border-top: 0.2rem solid $border-color-1;
+              border-bottom: 0.2rem solid $border-color-1;
+            }
+          }
+        }
+      }
+    }
+
+    .qualification,
+    .requirement {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      padding: 2rem 3rem;
+    }
+
+    .job-application-form {
+      padding: 2rem 3rem;
+      .row {
+        row-gap: 2rem;
+        @include custom-mb(2rem);
+      }
+    }
+  }
+}
